@@ -1,0 +1,159 @@
+// ===================================================================
+// ========================= Test Cases ==============================
+// ===================================================================
+// Command_tests
+
+../../rv64sim/rv64sim < command_test_b.cmd | diff --strip-trailing-cr - expected/command_test_b.log
+
+../../rv64sim/rv64sim < command_test_dot.cmd | diff --strip-trailing-cr - expected/command_test_dot.log
+
+../../rv64sim/rv64sim < command_test_l.cmd | diff --strip-trailing-cr - expected/command_test_l.log
+
+../../rv64sim/rv64sim < command_test_m.cmd | diff --strip-trailing-cr - expected/command_test_m.log
+
+../../rv64sim/rv64sim < command_test_pc.cmd | diff --strip-trailing-cr - expected/command_test_pc.log
+
+../../rv64sim/rv64sim < command_test_x.cmd | diff --strip-trailing-cr - expected/command_test_x.log
+
+
+// ===================================================================
+// Harness_tests
+
+../../rv64sim/rv64sim < harness_test_addi.cmd | diff --strip-trailing-cr - expected/harness_test_addi.log
+
+../../rv64sim/rv64sim < harness_test_addiw.cmd | diff --strip-trailing-cr - expected/harness_test_addiw.log
+
+../../rv64sim/rv64sim < harness_test_bne.cmd | diff --strip-trailing-cr - expected/harness_test_bne.log
+
+../../rv64sim/rv64sim < harness_test_jalr.cmd | diff --strip-trailing-cr - expected/harness_test_jalr.log
+
+../../rv64sim/rv64sim < harness_test_lui.cmd | diff --strip-trailing-cr - expected/harness_test_lui.log
+
+../../rv64sim/rv64sim < harness_test_slli.cmd | diff --strip-trailing-cr - expected/harness_test_slli.log
+
+
+// ===================================================================
+// Instruction_tests
+
+./run_test instruction_test_add | diff --strip-trailing-cr - expected/instruction_test_add.log
+
+./run_test instruction_test_addi | diff --strip-trailing-cr - expected/instruction_test_addi.log
+
+./run_test instruction_test_addiw | diff --strip-trailing-cr - expected/instruction_test_addiw.log
+
+./run_test instruction_test_addw | diff --strip-trailing-cr - expected/instruction_test_addw.log
+
+./run_test instruction_test_and | diff --strip-trailing-cr - expected/instruction_test_and.log
+
+./run_test instruction_test_andi | diff --strip-trailing-cr - expected/instruction_test_andi.log
+
+./run_test instruction_test_auipc | diff --strip-trailing-cr - expected/instruction_test_auipc.log
+
+./run_test instruction_test_beq | diff --strip-trailing-cr - expected/instruction_test_beq.log
+
+./run_test instruction_test_bge | diff --strip-trailing-cr - expected/instruction_test_bge.log
+
+./run_test instruction_test_bgeu | diff --strip-trailing-cr - expected/instruction_test_bgeu.log
+
+./run_test instruction_test_blt | diff --strip-trailing-cr - expected/instruction_test_blt.log
+
+./run_test instruction_test_bltu | diff --strip-trailing-cr - expected/instruction_test_bltu.log
+
+./run_test instruction_test_bne | diff --strip-trailing-cr - expected/instruction_test_bne.log
+
+./run_test instruction_test_ebreak | diff --strip-trailing-cr - expected/instruction_test_ebreak.log
+
+./run_test instruction_test_ecall | diff --strip-trailing-cr - expected/instruction_test_ecall.log
+
+./run_test instruction_test_fence | diff --strip-trailing-cr - expected/instruction_test_fence.log
+
+./run_test instruction_test_jal | diff --strip-trailing-cr - expected/instruction_test_jal.log
+
+./run_test instruction_test_jalr | diff --strip-trailing-cr - expected/instruction_test_jalr.log
+
+./run_test instruction_test_lb | diff --strip-trailing-cr - expected/instruction_test_lb.log
+
+./run_test instruction_test_lbu | diff --strip-trailing-cr - expected/instruction_test_lbu.log
+
+./run_test instruction_test_ld | diff --strip-trailing-cr - expected/instruction_test_ld.log
+
+./run_test instruction_test_lh | diff --strip-trailing-cr - expected/instruction_test_lh.log
+
+./run_test instruction_test_lhu | diff --strip-trailing-cr - expected/instruction_test_lhu.log
+
+./run_test instruction_test_lui | diff --strip-trailing-cr - expected/instruction_test_lui.log
+
+./run_test instruction_test_lw | diff --strip-trailing-cr - expected/instruction_test_lw.log
+
+./run_test instruction_test_lwu | diff --strip-trailing-cr - expected/instruction_test_lwu.log
+
+./run_test instruction_test_or | diff --strip-trailing-cr - expected/instruction_test_or.log
+
+./run_test instruction_test_ori | diff --strip-trailing-cr - expected/instruction_test_ori.log
+
+./run_test instruction_test_sb | diff --strip-trailing-cr - expected/instruction_test_sb.log
+
+./run_test instruction_test_sd | diff --strip-trailing-cr - expected/instruction_test_sd.log
+
+./run_test instruction_test_sh | diff --strip-trailing-cr - expected/instruction_test_sh.log
+
+./run_test instruction_test_sll | diff --strip-trailing-cr - expected/instruction_test_sll.log
+
+./run_test instruction_test_slli | diff --strip-trailing-cr - expected/instruction_test_slli.log
+
+./run_test instruction_test_slliw | diff --strip-trailing-cr - expected/instruction_test_slliw.log
+
+./run_test instruction_test_sllw | diff --strip-trailing-cr - expected/instruction_test_sllw.log
+
+./run_test instruction_test_slt | diff --strip-trailing-cr - expected/instruction_test_slt.log
+
+./run_test instruction_test_slti | diff --strip-trailing-cr - expected/instruction_test_slti.log
+
+./run_test instruction_test_sltiu | diff --strip-trailing-cr - expected/instruction_test_sltiu.log
+
+./run_test instruction_test_sltu | diff --strip-trailing-cr - expected/instruction_test_sltu.log
+
+./run_test instruction_test_sra | diff --strip-trailing-cr - expected/instruction_test_sra.log
+
+./run_test instruction_test_srai | diff --strip-trailing-cr - expected/instruction_test_srai.log
+
+./run_test instruction_test_sraiw | diff --strip-trailing-cr - expected/instruction_test_sraiw.log
+
+./run_test instruction_test_sraw | diff --strip-trailing-cr - expected/instruction_test_sraw.log
+
+./run_test instruction_test_srl | diff --strip-trailing-cr - expected/instruction_test_srl.log
+
+./run_test instruction_test_srli | diff --strip-trailing-cr - expected/instruction_test_srli.log
+
+./run_test instruction_test_srliw | diff --strip-trailing-cr - expected/instruction_test_srliw.log
+
+./run_test instruction_test_srlw | diff --strip-trailing-cr - expected/instruction_test_srlw.log
+
+./run_test instruction_test_sub | diff --strip-trailing-cr - expected/instruction_test_sub.log
+
+./run_test instruction_test_subw | diff --strip-trailing-cr - expected/instruction_test_subw.log
+
+./run_test instruction_test_sw | diff --strip-trailing-cr - expected/instruction_test_sw.log
+
+./run_test instruction_test_xor | diff --strip-trailing-cr - expected/instruction_test_xor.log
+
+./run_test instruction_test_xori | diff --strip-trailing-cr - expected/instruction_test_xori.log
+
+// ===================================================================
+// Compiled_tests
+
+./run_test compiled_test_leaf | diff --strip-trailing-cr - expected/compiled_test_leaf.log
+
+./run_test compiled_test_random | diff --strip-trailing-cr - expected/compiled_test_random.log
+
+./run_test compiled_test_fib | diff --strip-trailing-cr - expected/compiled_test_fib.log
+
+./run_test compiled_test_sort | diff --strip-trailing-cr - expected/compiled_test_sort.log
+
+./run_test compiled_test_quicksort | diff --strip-trailing-cr - expected/compiled_test_quicksort.log
+
+./run_test compiled_test_thrash | diff --strip-trailing-cr - expected/compiled_test_thrash.log
+
+// ===================================================================
+// ============================= End =================================
+// ===================================================================
